@@ -16,7 +16,7 @@ after-success:
   - docker build -t shanmicheal25/multi-server ./server
 
   # Log in to the docker CLI
-  - echo "$DOCJER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to dockerhub
   - docker push shanmicheal25/multi-client
   - docker push shanmicheal25/multi-nginx
