@@ -9,7 +9,7 @@ script:
   - docker run -e CI=true shanmicheal25/react-test npm test
   #- docker run shanmicheal25/docker-react  npm run test -- --coverage
 
-after-success:
+after_success:
   - docker build -t shanmicheal25/multi-client ./client
   - docker build -t shanmicheal25/multi-nginx ./nginx
   - docker build -t shanmicheal25/multi-worker ./worker
