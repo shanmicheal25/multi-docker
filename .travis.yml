@@ -23,17 +23,4 @@ after-success:
   - docker push shanmicheal25/multi-worker
   - docker push shanmicheal25/multi-server
 
-deploy:
-  provider: elasticbeanstalk ## provider about aws /azure/ any deployment 
-  region: "ap-southeast-1"  
-  app: "dockerImage" 
-  env: "Dockerimage-env"
-  bucket_name: "elasticbeanstalk-ap-southeast-1-489459884699"
-  bucket_path: "e-gmnzchihdf" ## dockerImage  1
-  edge: true
-  on:
-    branch: master
-  access_key_id:
-    secure: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: "$AWS_SECRET_KEY"
+
